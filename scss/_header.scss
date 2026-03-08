@@ -1,0 +1,112 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// =====================
+// Top Header
+// =====================
+.top-header {
+  @include flex-between;
+  height: $header-height;
+  padding: 0 $spacing-lg 0 $spacing-sm;
+  background-color: $color-bg;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+// =====================
+// Header Navigation
+// =====================
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: $spacing-md;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $radius-md;
+    color: $color-text-muted;
+    font-size: $font-md;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    width: 196px;
+    height: 46px;
+
+    &:hover {
+      color: $color-text;
+
+      .header-nav__icon {
+        opacity: 0.88;
+      }
+    }
+
+    &--active {
+      color: $color-text;
+      background-color: $color-active-bg;
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.55;
+    transition: opacity 0.2s ease;
+  }
+}
+
+// =====================
+// Header Actions
+// =====================
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    color: $color-text-muted;
+    transition: all 0.2s ease;
+
+    img {
+      width: 35px;
+      height: 35px;
+      opacity: 0.55;
+      transition: opacity 0.2s ease;
+    }
+
+    &:hover img {
+      opacity: 0.88;
+    }
+
+    &--avatar {
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    &--lock:active img,
+    &--lock:focus img {
+      filter: invert(68%) sepia(71%) saturate(529%) hue-rotate(96deg) brightness(96%) contrast(96%);
+    }
+  }
+}
+
+// =====================
+// Avatar
+// =====================
+.header-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
