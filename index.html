@@ -142,7 +142,7 @@
           <button class="header-actions__btn" aria-label="Notifications">
             <img src="assets/icons/notification.svg" alt="">
           </button>
-          <button class="header-actions__btn" aria-label="Lock">
+          <button class="header-actions__btn header-actions__btn--lock" aria-label="Lock">
             <img src="assets/icons/lock.svg" alt="">
           </button>
           <button class="header-actions__btn" aria-label="Friends">
@@ -281,27 +281,39 @@
 
   </div><!-- /.app-wrapper -->
 
+  <!-- DJ Panel Toggle (checkbox hack) -->
+  <input type="checkbox" id="dj-toggle" class="dj-toggle__input">
+
   <!-- Bottom Player -->
   <footer class="player">
+    <!-- CENTER visually: Track Info -->
     <div class="player-left">
-      <img src="assets/images/covers/current-track.jpg" alt="Get Lucky" class="player-cover">
+      <img src="assets/images/get-lucky.png" alt="Get Lucky" class="player-cover">
       <div class="player-track">
         <span class="player-track__title">Get Lucky</span>
         <span class="player-track__artist">Daft Punk</span>
         <span class="player-track__album">Random Access Memories</span>
       </div>
-      <div class="player-left__actions">
-        <button class="player-btn" aria-label="Like"></button>
-        <button class="player-btn" aria-label="Add"></button>
-      </div>
     </div>
+
+    <!-- LEFT visually: Controls + Progress -->
     <div class="player-center">
       <div class="player-controls">
-        <button class="player-btn" aria-label="Shuffle"></button>
-        <button class="player-btn" aria-label="Previous"></button>
-        <button class="player-btn player-btn--play" aria-label="Pause"></button>
-        <button class="player-btn" aria-label="Next"></button>
-        <button class="player-btn" aria-label="Repeat"></button>
+        <button class="player-btn player-btn--play" aria-label="Pause">
+          <img src="assets/icons/pause.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Previous">
+          <img src="assets/icons/previous-song.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Next">
+          <img src="assets/icons/next-song.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Shuffle">
+          <img src="assets/icons/shuffle.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Repeat">
+          <img src="assets/icons/repeat.svg" alt="">
+        </button>
       </div>
       <div class="player-progress">
         <span class="player-progress__time">2:23</span>
@@ -309,19 +321,54 @@
           <div class="player-progress__fill"></div>
         </div>
         <span class="player-progress__time">4:45</span>
+        <button class="player-btn" aria-label="Volume">
+          <img src="assets/icons/sound.svg" alt="">
+        </button>
       </div>
     </div>
+
+    <!-- RIGHT visually: Actions -->
     <div class="player-right">
-      <button class="player-btn" aria-label="Lyrics"></button>
-      <button class="player-btn" aria-label="Queue"></button>
-      <button class="player-btn" aria-label="Device"></button>
-      <button class="player-btn" aria-label="Volume"></button>
-      <div class="player-volume">
-        <div class="player-volume__bar">
-          <div class="player-volume__fill"></div>
+      <button class="player-btn" aria-label="Like">
+        <img src="assets/icons/pc-like.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="Add">
+        <img src="assets/icons/pc-playlist.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="Lyrics">
+        <img src="assets/icons/pc-lyrics.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="Device">
+        <img src="assets/icons/speaker.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="More">
+        <img src="assets/icons/pc-playing-more.svg" alt="">
+      </button>
+      <div class="dj-section">
+        <!-- Closed state: standalone DJ toggle -->
+        <label for="dj-toggle" class="player-btn dj-toggle__btn" aria-label="DJ">
+          <img src="assets/icons/DJ.png" alt="">
+        </label>
+        <!-- Open state: panel with controls + DJ icon inside -->
+        <div class="dj-panel">
+          <button class="player-btn" aria-label="Skip">
+            <img src="assets/icons/dj-skip.svg" alt="">
+          </button>
+          <button class="player-btn" aria-label="Like">
+            <img src="assets/icons/like.svg" alt="">
+          </button>
+          <button class="player-btn" aria-label="Dislike">
+            <img src="assets/icons/dislike.svg" alt="">
+          </button>
+          <label for="dj-toggle" class="player-btn" aria-label="Disconnect">
+            <img src="assets/icons/turn-off.svg" alt="">
+          </label>
+          <img src="assets/icons/DJ.png" alt="" class="dj-panel__dj-icon">
         </div>
+        <button class="player-btn" aria-label="Queue">
+          <img src="assets/icons/pc-queue.svg" alt="">
+        </button>
       </div>
-      <button class="player-btn" aria-label="Fullscreen"></button>
     </div>
   </footer>
 
