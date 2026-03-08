@@ -235,6 +235,9 @@ input {
   padding: 0 24px 0 8px;
   background-color: #060606;
   flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .header-nav {
