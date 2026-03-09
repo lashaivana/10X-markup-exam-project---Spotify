@@ -20,3 +20,18 @@
 @use 'sidebar' as *;
 @use 'header' as *;
 @use 'player' as *;
+
+// =====================
+// Home page
+// =====================
+@use 'content/card' as *;
+
+// =====================
+// Search page
+// =====================
+@use 'content/search' as *;
+@use 'content/card-2' as *;
+
+// =====================
+// Liked songs page
+// =====================

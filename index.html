@@ -133,7 +133,7 @@
             <img src="assets/icons/discover.svg" alt="" class="header-nav__icon">
             <span class="header-nav__text">Discover</span>
           </a>
-          <a href="search.html" class="header-nav__link">
+          <a href="html/search.html" class="header-nav__link">
             <img src="assets/icons/search.svg" alt="" class="header-nav__icon">
             <span class="header-nav__text">Search</span>
           </a>
@@ -168,114 +168,455 @@
           <button class="filter-chip">Audiobooks</button>
         </div>
 
-        <!-- Made For You Section -->
-        <section class="section">
-          <div class="section-header">
-            <h2 class="section-title">Made For You</h2>
-            <div class="section-actions">
-              <button class="section-actions__btn" aria-label="Previous"></button>
-              <button class="section-actions__btn" aria-label="Next"></button>
-              <button class="section-actions__btn" aria-label="More"></button>
+        <!-- // Made For You Section -->
+       <section class="section-wrapper">
+       <div class="section_header">
+                <h3 class="section_title">Made For You</h3>
+                <div class="section_controls">
+                    <button class="arrow" onclick="document.getElementById('made-for-you').scrollBy({left:-600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.3224 6.90363L1.01029 6.90363M1.01029 6.90363L6.90353 12.7969M1.01029 6.90363L6.90353 1.01039" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="arrow" onclick="document.getElementById('made-for-you').scrollBy({left:600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.01025 6.90301H15.3224M15.3224 6.90301L9.42917 1.00977M15.3224 6.90301L9.42917 12.7963" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                     <img src="assets/icons/threedot.svg" alt="">
+                </div>
             </div>
-          </div>
-          <div class="cards-row">
-            <a href="#" class="card">
-              <img src="assets/images/covers/discover-weekly.jpg" alt="Discover Weekly">
-              <div class="card-info">
-                <strong class="card-title">Discover Weekly</strong>
-                <span class="card-count">50</span>
-                <p class="card-subtitle">Your weekly mixtape of fresh music.</p>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="assets/images/covers/daily-mix-1.jpg" alt="Daily Mix 1">
-              <div class="card-info">
-                <strong class="card-title">Daily Mix 1</strong>
-                <span class="card-count">50</span>
-                <p class="card-subtitle">Linkin Park, System Of A Down, Coal Chamber...</p>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="assets/images/covers/daily-mix-2.jpg" alt="Daily Mix 2">
-              <div class="card-info">
-                <strong class="card-title">Daily Mix 2</strong>
-                <span class="card-count">50</span>
-                <p class="card-subtitle">Avril Lavigne, Lorde, Charli XCX and more</p>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="assets/images/covers/daily-mix-3.jpg" alt="Daily Mix 3">
-              <div class="card-info">
-                <strong class="card-title">Daily Mix 3</strong>
-                <span class="card-count">50</span>
-                <p class="card-subtitle">The Strokes, Martin Garrix, MGMT and more</p>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="assets/images/covers/daily-mix-4.jpg" alt="Daily Mix 4">
-              <div class="card-info">
-                <strong class="card-title">Daily Mix 4</strong>
-                <span class="card-count">50</span>
-                <p class="card-subtitle">Chuck Berry, Elvis Presley, Roy Orbison and more</p>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="assets/images/covers/daily-mix-5.jpg" alt="Daily Mix 5">
-              <div class="card-info">
-                <strong class="card-title">Daily Mix 5</strong>
-                <span class="card-count">50</span>
-                <p class="card-subtitle">Frank Sinatra, Gerhard Trede, Dean Martin and more</p>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="assets/images/covers/daily-mix-6.jpg" alt="Daily Mix 6">
-              <div class="card-info">
-                <strong class="card-title">Daily Mix 6</strong>
-                <span class="card-count">50</span>
-                <p class="card-subtitle">The Strokes, Martin Garrix, MGMT and more</p>
-              </div>
-            </a>
-            <a href="#" class="card">
-              <img src="assets/images/covers/nirvana-radio.jpg" alt="Nirvana Radio">
-              <div class="card-info">
-                <strong class="card-title">Nirvana Radio</strong>
-                <span class="card-count">50</span>
-                <p class="card-subtitle">The Strokes, Martin Garrix, MGMT and more</p>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        <!-- Your Top Mixes Section -->
-        <section class="section">
-          <div class="section-header">
-            <h2 class="section-title">Your top mixes</h2>
-            <div class="section-actions">
-              <button class="section-actions__btn" aria-label="Previous"></button>
-              <button class="section-actions__btn" aria-label="Next"></button>
-              <button class="section-actions__btn" aria-label="More"></button>
+            <div class="cards-wrapper" id="made-for-you">
+                <!-- CARD -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
             </div>
-          </div>
-          <div class="cards-row">
-            <!-- cards -->
-          </div>
-        </section>
-
-        <!-- Your Favorite Artists Section -->
-        <section class="section">
-          <div class="section-header">
-            <h2 class="section-title">Your favorite artists</h2>
-            <div class="section-actions">
-              <button class="section-actions__btn" aria-label="Previous"></button>
-              <button class="section-actions__btn" aria-label="Next"></button>
-              <button class="section-actions__btn" aria-label="More"></button>
+            </section>
+            <!-- MFY section end -->
+             <!-- // Your top mixes section -->
+        <section class="section-wrapper">
+            <div class="section_header">
+                <h3 class="section_title">Your top mixes</h3>
+                <div class="section_controls">
+                    <button class="arrow" onclick="document.getElementById('your-top-mixes').scrollBy({left:-600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.3224 6.90363L1.01029 6.90363M1.01029 6.90363L6.90353 12.7969M1.01029 6.90363L6.90353 1.01039" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="arrow" onclick="document.getElementById('your-top-mixes').scrollBy({left:600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.01025 6.90301H15.3224M15.3224 6.90301L9.42917 1.00977M15.3224 6.90301L9.42917 12.7963" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                     <img src="assets/icons/threedot.svg" alt="">
+                </div>
             </div>
-          </div>
-          <div class="cards-row">
-            <!-- cards -->
-          </div>
-        </section>
+            <div class="cards-wrapper" id="your-top-mixes">
+                <!-- CARD -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                 <div class="card_wrapper">
+                    <div class="second"></div>
+                    <div class="third"></div>
+                    <div class="card_banner">
+                        <img src="assets/images/home/discover.svg" alt="">
+                    </div>
+                    <div class="card_content">
+                        <div class="content_header">
+                            <h4 class="card_title">Discover Weekly</h4>
+                            <h4 class="card_number"  style="color: #CE6E9A;">50</h4>
+                        </div>
+                        <p class="card_text">Your weekly mixtape of fresh music</p>
+                    </div>
+                 </div>
+                 <!--  -->
+                </div>
+                </section>
+                <!-- YTM section end -->
+                 
+                <!-- // your favorite artists section -->
+            <section class="section-wrapper">
+                <div class="section_header">
+                <h3 class="section_title">Your favourite artists</h3>
+                <div class="section_controls">
+                    <button class="arrow" onclick="document.getElementById('favourite-artists').scrollBy({left:-600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.3224 6.90363L1.01029 6.90363M1.01029 6.90363L6.90353 12.7969M1.01029 6.90363L6.90353 1.01039" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="arrow" onclick="document.getElementById('favourite-artists').scrollBy({left:600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.01025 6.90301H15.3224M15.3224 6.90301L9.42917 1.00977M15.3224 6.90301L9.42917 12.7963" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                     <img src="assets/icons/threedot.svg" alt="">
+                </div>
+            </div>
+            <div class="search_card-wrapper" id="favourite-artists">
+            <!-- CARD TYPE ROUND -->
+             <div class="search_card">
+                <img class="search_card-banner" src="assets/images/gnr.svg" alt="">
+                <div class="search_card-title">
+                    <h3 class="artist">Guns N'Roses</h3>
+                </div>
+            </div>
+            <div class="search_card">
+                <img class="search_card-banner" src="../assets/images/daftpunk3.svg" alt="">
+                <div class="search_card-title">
+                    <h3 class="artist">Daft Punk</h3>
+                </div>
+            </div>
 
+              <div class="search_card">
+                <img class="search_card-banner" src="../assets/images/davidbowie.svg" alt="">
+                <div class="search_card-title">
+                    <h3 class="artist">Dawid Bowie</h3>
+                </div>
+            </div>
+            
+            </div>
+         </section>
+        <!-- SECTION END -->
+         <!-- Albums for you section -->
+         <section class="section-wrapper">
+                <div class="section_header">
+                <h3 class="section_title">Your favourite artists</h3>
+                <div class="section_controls">
+                    <button class="arrow" onclick="document.getElementById('for-you').scrollBy({left:-600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.3224 6.90363L1.01029 6.90363M1.01029 6.90363L6.90353 12.7969M1.01029 6.90363L6.90353 1.01039" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="arrow" onclick="document.getElementById('for-you').scrollBy({left:600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.01025 6.90301H15.3224M15.3224 6.90301L9.42917 1.00977M15.3224 6.90301L9.42917 12.7963" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                     <img src="assets/icons/threedot.svg" alt="">
+                </div>
+            </div>
+            <div class="search_card-wrapper" id="for-you">
+            <!-- CARD TYPE RECTANGLE-->
+              <div class="search_card-square">
+                <div class="hover-square"></div>
+                <img class="search_card-rectangle" src="../assets/images/muse.svg" alt="">
+                <div class="search_card-title-rec">
+                    <h3 class="artist">Black Holes</h3>
+                    <p>Muse</p>
+                </div>
+                </div>
+                <!--  -->
+                <div class="search_card-square">
+                <div class="hover-square"></div>
+                <img class="search_card-rectangle" src="../assets/images/muse.svg" alt="">
+                <div class="search_card-title-rec">
+                    <h3 class="artist">Black Holes</h3>
+                    <p>Muse</p>
+                </div>
+                </div>
+                <!--  -->
+                <div class="search_card-square">
+                <div class="hover-square"></div>
+                <img class="search_card-rectangle" src="../assets/images/muse.svg" alt="">
+                <div class="search_card-title-rec">
+                    <h3 class="artist">Black Holes</h3>
+                    <p>Muse</p>
+                </div>
+                </div>
+                <!--  -->
+                <div class="search_card-square">
+                <div class="hover-square"></div>
+                <img class="search_card-rectangle" src="../assets/images/muse.svg" alt="">
+                <div class="search_card-title-rec">
+                    <h3 class="artist">Black Holes</h3>
+                    <p>Muse</p>
+                </div>
+                </div>
+                <!--  -->
+            
+            </div>
+         </section>
       </main>
     </div><!-- /.main-area -->
 

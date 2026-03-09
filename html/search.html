@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <!-- App Wrapper -->
+  <div class="app-wrapper">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-header__left">
+          <img src="../assets/icons/mylibrary.svg" alt="" class="sidebar-header__icon">
+          <span class="sidebar-title">My Library</span>
+        </div>
+        <div class="sidebar-header__actions">
+          <button class="sidebar-header__btn" aria-label="More">···</button>
+          <button class="sidebar-header__btn" aria-label="Add">+</button>
+        </div>
+      </div>
+      <nav class="sidebar-nav">
+        <ul class="sidebar-list">
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/pins.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Pins</span>
+              <span class="sidebar-link__arrow">›</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <details class="sidebar-dropdown">
+              <summary class="sidebar-link">
+                <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                <span class="sidebar-link__text">Playlists</span>
+                <span class="sidebar-link__arrow">›</span>
+              </summary>
+              <ul class="sidebar-sublist">
+                <li class="sidebar-subitem">
+                  <a href="#" class="sidebar-sublink">
+                    <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                    <span>Chill stuff</span>
+                  </a>
+                </li>
+                <li class="sidebar-subitem">
+                  <a href="#" class="sidebar-sublink">
+                    <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                    <span>Rock n Roll</span>
+                  </a>
+                </li>
+                <li class="sidebar-subitem">
+                  <a href="#" class="sidebar-sublink">
+                    <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                    <span>The Jux Box</span>
+                  </a>
+                </li>
+                <li class="sidebar-subitem">
+                  <a href="#" class="sidebar-sublink">
+                    <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                    <span>Selected Linkin Park</span>
+                  </a>
+                </li>
+                <li class="sidebar-subitem">
+                  <a href="#" class="sidebar-sublink">
+                    <img src="../assets/icons/playlists.svg" alt="" class="sidebar-link__icon">
+                    <span>Vibe</span>
+                  </a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/likedsongs.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Liked songs</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/saves.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Saves</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/albums.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Albums</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/folders.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Folders</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/podcasts.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Podcasts</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/audiobooks.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Audiobooks</span>
+            </a>
+          </li>
+          <li class="sidebar-item">
+            <a href="#" class="sidebar-link">
+              <img src="../assets/icons/artists.svg" alt="" class="sidebar-link__icon">
+              <span class="sidebar-link__text">Artists</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Area -->
+    <div class="main-area">
+
+      <!-- Top Header -->
+      <header class="top-header">
+        <nav class="header-nav">
+          <a href="../index.html" class="header-nav__link">
+            <img src="../assets/icons/home-active.svg" alt="" class="header-nav__icon">
+            <span class="header-nav__text">Home</span>
+          </a>
+          <a href="discover.html" class="header-nav__link">
+            <img src="../assets/icons/discover.svg" alt="" class="header-nav__icon">
+            <span class="header-nav__text">Discover</span>
+          </a>
+          <a href="search.html" class="header-nav__link header-nav__link--active">
+            <img src="../assets/icons/search.svg" alt="" class="header-nav__icon">
+            <span class="header-nav__text">Search</span>
+          </a>
+        </nav>
+        <div class="header-actions">
+          <button class="header-actions__btn" aria-label="Notifications">
+            <img src="../assets/icons/notification.svg" alt="">
+          </button>
+          <button class="header-actions__btn header-actions__btn--lock" aria-label="Lock">
+            <img src="../assets/icons/lock.svg" alt="">
+          </button>
+          <button class="header-actions__btn" aria-label="Friends">
+            <img src="../assets/icons/friends.svg" alt="">
+          </button>
+          <button class="header-actions__btn" aria-label="Settings">
+            <img src="../assets/icons/settings.svg" alt="">
+          </button>
+          <button class="header-actions__btn header-actions__btn--avatar" aria-label="Profile">
+            <img src="../assets/icons/avatar.png" alt="Profile" class="header-avatar">
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+
+       <!-- RECENT SEARCH SECTION -->
+    <section class="recent_search-wrapper">
+        <h2>Recent searches</h2>
+        <div class="search_card-wrapper">
+            <!-- CARD TYPE ROUND -->
+            <div class="search_card">
+                <div class="x-mark">
+                <img src="../assets/icons/xmark.svg" alt="">
+                </div>
+                <img class="search_card-banner" src="../assets/images/daftpunk3.svg" alt="">
+                <div class="search_card-title">
+                    <h3 class="artist">Daft Punk</h3>
+                </div>
+            </div>
+
+              <div class="search_card">
+                <div class="x-mark">
+                <img src="../assets/icons/xmark.svg" alt="">
+                </div>
+                <img class="search_card-banner" src="../assets/images/davidbowie.svg" alt="">
+                <div class="search_card-title">
+                    <h3 class="artist">Dawid Bowie</h3>
+                </div>
+            </div>
+            <!-- CARD TYPE RECTANGLE -->
+              <div class="search_card-square">
+                <div class="x-mark">
+                <img src="../assets/icons/xmark.svg" alt="">
+                </div>
+                <div class="hover-square"></div>
+                <img class="search_card-rectangle" src="../assets/images/muse.svg" alt="">
+                <div class="search_card-title-rec">
+                    <h3 class="artist">Black Holes</h3>
+                    <p>Muse</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BROWSE ALL SECTION -->
+    <section class="browse_all-wrapper">
+        <h2>Browse All</h2>
+        <!-- // DISCOVER SECTION START -->
+        <div class="baowse_all-section">
+            <div class="section-header">
+                <h3 class="section-title">Discover</h3>
+                <div class="section__controls">
+                     <button class="arrow" onclick="document.getElementById('discover-row').scrollBy({left:-600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.3224 6.90363L1.01029 6.90363M1.01029 6.90363L6.90353 12.7969M1.01029 6.90363L6.90353 1.01039" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="arrow" onclick="document.getElementById('discover-row').scrollBy({left:600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.01025 6.90301H15.3224M15.3224 6.90301L9.42917 1.00977M15.3224 6.90301L9.42917 12.7963" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="section-cards" id="discover-row">
+                 <!-- CARD -->
+                 <div class="card_2-wrapper" style="background-color:#1E3264;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Made For <br>You</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                <!--  -->
+                 <div class="card_2-wrapper" style="background-color: #BA5D07;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">New <br>Releases</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                
+                 <div class="card_2-wrapper" style="background-color: #1E3264;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Spotify <br>Classics</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #8D67AB;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Charts</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #B02897;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Trending</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #8D67AB;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Discover</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #777777;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Spotify <br>Singles</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #BA5D07;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Decades</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- DISCOVER SECTION END -->
+
+        <!-- // GENRES START -->
+         <div class="baowse_all-section">
+            <div class="section-header">
+                <h3 class="section-title">Genres</h3>
+                 <div class="section__controls">
+                         <button class="arrow" onclick="document.getElementById('genres-row').scrollBy({left:-600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.3224 6.90363L1.01029 6.90363M1.01029 6.90363L6.90353 12.7969M1.01029 6.90363L6.90353 1.01039" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="arrow" onclick="document.getElementById('genres-row').scrollBy({left:600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.01025 6.90301H15.3224M15.3224 6.90301L9.42917 1.00977M15.3224 6.90301L9.42917 12.7963" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                 </div>
+            </div>
+            <div class="section-cards" id="genres-row">
+                 <!-- CARD -->
+                 <div class="card_2-wrapper" style="background-color: #148A08;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Pop</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                <!--  -->
+                 <div class="card_2-wrapper" style="background-color: #D84000;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Country</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                
+                 <div class="card_2-wrapper" style="background-color: #503750;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Hip-Hop</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #006450;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Rock</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #E91429;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Indie</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #1E3264;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Punk</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #E91429;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Metal</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #537AA1;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Instrumental</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- GENRES END -->
+        <!-- // MOOD & ACTIVITY START -->
+         <div class="baowse_all-section">
+            <div class="section-header">
+                <h3 class="section-title">Mood & Activity</h3>
+                 <div class="section__controls">
+                         <button class="arrow" onclick="document.getElementById('activity-row').scrollBy({left:-600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.3224 6.90363L1.01029 6.90363M1.01029 6.90363L6.90353 12.7969M1.01029 6.90363L6.90353 1.01039" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="arrow" onclick="document.getElementById('activity-row').scrollBy({left:600, behavior:'smooth'})">
+                        <svg class="arrow" width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.01025 6.90301H15.3224M15.3224 6.90301L9.42917 1.00977M15.3224 6.90301L9.42917 12.7963" stroke="currentColor" stroke-width="2.02054" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="section-cards" id="activity-row">
+                 <!-- CARD -->
+                 <div class="card_2-wrapper" style="background-color:#1c3e94 ;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">In the car</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                <!--  -->
+                 <div class="card_2-wrapper" style="background-color: #DD138B;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Mood</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                
+                 <div class="card_2-wrapper" style="background-color: #777777;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Workout</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #D84000;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Chill</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #1E3264;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Sleep</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #537AA1;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Party</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #537AA1;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">At Home</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #503750;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Focus</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- MOOD & ACTIVITY END -->
+
+        <!-- // ENTERTAINMENT START -->
+          <div class="baowse_all-section">
+            <h3 class="section-title">Entertainment</h3>
+            <div class="section-cards">
+                 <!-- CARD -->
+                 <div class="card_2-wrapper" style="background-color: #E91429;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Netflix</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                <!--  -->
+                 <div class="card_2-wrapper" style="background-color: #dd1367;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Anime</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                
+                 <div class="card_2-wrapper" style="background-color: #2352af;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Disney</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #dd1367;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Gaming</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ENTERTAINMENT END -->
+
+        <!-- // PODCASTS START -->
+         <div class="baowse_all-section">
+            <h3 class="section-title">Podcasts</h3>
+            <div class="section-cards">
+                 <!-- CARD -->
+                 <div class="card_2-wrapper" style="background-color: #006450;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Podcasts</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                <!--  -->
+                 <div class="card_2-wrapper" style="background-color: #2352af;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Podcast <br>Charts</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                
+                 <div class="card_2-wrapper" style="background-color: #006450;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Podcast New <br>Releases</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #E91429;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Video</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PODCASTS END -->
+
+        <!-- // AUDIOBOOKS STARR -->
+         <div class="baowse_all-section">
+            <h3 class="section-title">Audiobooks</h3>
+            <div class="section-cards">
+                 <!-- CARD -->
+                 <div class="card_2-wrapper" style="background-color: #1E3264;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Audiobooks</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                <!--  -->
+                 <div class="card_2-wrapper" style="background-color: #8D67AB;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Sci-Fi & <br>FAntasy <br>Essentials</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+                
+                 <div class="card_2-wrapper" style="background-color: #503750;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Fiction & <br>Literature</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #1E3264;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Mystery & <br>Thriller</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+
+                 <div class="card_2-wrapper" style="background-color: #006450;">
+                    <div class="card_2-header">
+                        <h3 class="card_2-header">Self-Help</h3>
+                     </div>
+                    <div class="card_2-banner">
+                         <img src="assets/images/image 2.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- AUDIOBOOKS END -->
+    </section>
+
+  <!-- Bottom Player -->
+  <footer class="player">
+    <!-- CENTER visually: Track Info -->
+    <div class="player-left">
+      <img src="../assets/images/get-lucky.png" alt="Get Lucky" class="player-cover">
+      <div class="player-track">
+        <span class="player-track__title">Get Lucky</span>
+        <span class="player-track__artist">Daft Punk</span>
+        <span class="player-track__album">Random Access Memories</span>
+      </div>
+    </div>
+
+    <!-- LEFT visually: Controls + Progress -->
+    <div class="player-center">
+      <div class="player-controls">
+        <button class="player-btn player-btn--play" aria-label="Pause">
+          <img src="../assets/icons/pause.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Previous">
+          <img src="../assets/icons/previous-song.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Next">
+          <img src="../assets/icons/next-song.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Shuffle">
+          <img src="../assets/icons/shuffle.svg" alt="">
+        </button>
+        <button class="player-btn" aria-label="Repeat">
+          <img src="../assets/icons/repeat.svg" alt="">
+        </button>
+      </div>
+      <div class="player-progress">
+        <span class="player-progress__time">2:23</span>
+        <div class="player-progress__bar">
+          <div class="player-progress__fill"></div>
+        </div>
+        <span class="player-progress__time">4:45</span>
+        <button class="player-btn" aria-label="Volume">
+          <img src="../assets/icons/sound.svg" alt="">
+        </button>
+      </div>
+    </div>
+
+    <!-- RIGHT visually: Actions -->
+    <div class="player-right">
+      <button class="player-btn" aria-label="Like">
+        <img src="../assets/icons/pc-like.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="Add">
+        <img src="../assets/icons/pc-playlist.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="Lyrics">
+        <img src="../assets/icons/pc-lyrics.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="Device">
+        <img src="../assets/icons/speaker.svg" alt="">
+      </button>
+      <button class="player-btn" aria-label="More">
+        <img src="../assets/icons/pc-playing-more.svg" alt="">
+      </button>
+      <div class="dj-section">
+        <!-- Closed state: standalone DJ toggle -->
+        <label for="dj-toggle" class="player-btn dj-toggle__btn" aria-label="DJ">
+          <img src="../assets/icons/DJ.png" alt="">
+        </label>
+        <!-- Open state: panel with controls + DJ icon inside -->
+        <div class="dj-panel">
+          <button class="player-btn" aria-label="Skip">
+            <img src="../assets/icons/dj-skip.svg" alt="">
+          </button>
+          <button class="player-btn" aria-label="Like">
+            <img src="../assets/icons/like.svg" alt="">
+          </button>
+          <button class="player-btn" aria-label="Dislike">
+            <img src="../assets/icons/dislike.svg" alt="">
+          </button>
+          <label for="dj-toggle" class="player-btn" aria-label="Disconnect">
+            <img src="../assets/icons/turn-off.svg" alt="">
+          </label>
+          <img src="../assets/icons/DJ.png" alt="" class="dj-panel__dj-icon">
+        </div>
+        <button class="player-btn" aria-label="Queue">
+          <img src="../assets/icons/pc-queue.svg" alt="">
+        </button>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
