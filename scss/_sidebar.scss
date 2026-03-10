@@ -32,6 +32,12 @@
     color: $color-text;
     font-weight: 700;
     font-size: $font-lg;
+     cursor: pointer; // ✅ დაამატე
+     text-decoration: none; // ✅ დაამატე
+
+  &:hover {
+    color: #fff; // ✅ დაამატე
+  }
   }
 
   &__icon {
@@ -105,7 +111,7 @@
 // =====================
 // Active State
 // =====================
-.sidebar-item--active .sidebar-link {
+.sidebar-item--active {
   color: $color-text;
   background-color: $color-surface;
 }

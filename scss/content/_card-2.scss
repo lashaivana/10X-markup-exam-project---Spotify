@@ -1,0 +1,50 @@
+.card_2-wrapper{
+    height: 170px;
+    width: 170px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+     transition: transform 0.3s ease, background-color 0.3s ease;
+     z-index: 1;
+
+     &:hover {
+    transform: scale(1.03);
+    background-color: #243d8a;
+
+    .card_2-banner {
+      transform: rotate(20deg) scale(1.08);
+    }
+  }
+}
+.card_2-header{
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+.card_2-banner{
+    width: 104.27px;
+    height: 104.27px;
+    border-radius: 5px;
+    object-fit: cover;
+    overflow: hidden;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    transform: rotate(30deg);
+    box-shadow: -4px 4px 12px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease;
+    z-index: 1;
+
+}
+@media (max-width:390px){
+    .card_2-wrapper{
+        width: 170px;
+        height: 100px;
+    }
+    .card_2-banner{
+        bottom: -45px;
+        right: -10px;
+    }
+}
