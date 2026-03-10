@@ -41,3 +41,9 @@
 // Library page
 // =====================
 @use 'content/library' as *;
+
+// =====================
+// Filter chips
+// =====================
+@use 'content/filters' as *;
+@use 'content/home.dropdown' as *;

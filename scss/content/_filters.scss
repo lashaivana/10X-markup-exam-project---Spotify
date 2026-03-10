@@ -1,0 +1,65 @@
+.filters-sticky-header {
+  position: sticky;        // ეს აჩერებს ელემენტს სქროლისას
+  top: -30px;                  // სად გაჩერდეს (ჰედერის ქვემოთ თუ გაქვს სხვა ჰედერი, აქ ციფრი შეცვალე)
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  
+  // შუშის ეფექტი
+  background-color:  rgba(6, 6, 6, 0.6); // მუქი გამჭვირვალე ფონი
+  backdrop-filter: blur(20px);             // ბლარი
+  -webkit-backdrop-filter: blur(20px);
+  
+  margin: 0 -24px 20px -24px; // თუ კონტეინერს პადინგი აქვს, ეს გვერდებზე ბოლომდე გაშლის
+}
+
+.filter-chips {
+  display: flex;
+  gap: 8px;
+
+  .chip {
+    background-color: rgba(32, 32, 32, 0.5);
+    border: none;
+    color: white;
+    padding: 6px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #E0E0E0;
+       color: #060606;
+    }
+
+    // &.active {
+    //   background-color: #E0E0E0;
+    //   color: #060606;
+    // }
+  }
+}
+
+.customize-feed-menu {
+  position: absolute;
+  top: 60px; // დაარეგულირე შენი ჰედერის სიმაღლის მიხედვით
+  right: 20px;
+  // ... შუშის ეფექტის სტილები ...
+  
+  // დამალული მდგომარეობა
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+
+  // როცა აქტიურია
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
+
+
