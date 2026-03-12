@@ -51,6 +51,9 @@
 @include mobile {
   .app-wrapper {
     flex-direction: column;
+    height: auto;          // <--- ვაძლევთ საშუალებას, გაიზარდოს კონტენტის მიხედვით
+    overflow: visible;
+    
   }
 
   .main-area {

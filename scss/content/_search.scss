@@ -1,3 +1,5 @@
+@use '../variables' as *;
+@use '../mixins' as *;
 // =============================================================================
 // SEARCH PAGE — Recent Searches + Browse All sections
 // =============================================================================
@@ -106,8 +108,7 @@
     background-color: $color-active-bg; 
     border-radius: 50%;
     @include flex-center;           
-    z-index: 2;                 
-    opacity: 0;                
+    z-index: 2;                                
     transition: opacity 0.2s ease;
 
    
@@ -130,7 +131,7 @@
     height: 170px;              
     border-radius: $radius-md;  
     background-color: rgba(98, 120, 177, 0.3); 
-    opacity: 0;                 
+                   
     transition: opacity 0.3s ease;
     z-index: 0;                
                                 
@@ -251,7 +252,7 @@
 
 .card_2-header {
     position: relative;         
-    z-index: 1;
+    z-index: 2;
     padding: $spacing-md;      
 }
 
@@ -259,7 +260,7 @@
 .card_2-title {
     @include truncate;          
     color: $fg-primary;        
-    font-size: $font-md;        
+    font-size: 20px;        
     font-weight: 700;
     line-height: 1.3;
 }
@@ -269,8 +270,8 @@
     position: absolute;
     bottom: 0;
     right: 0;                   
-    width: 80px;                
-    height: 80px;               
+    width: 104.27px;                
+    height: 104.27px;               
     transform: rotate(25deg) translate(10%, 10%); 
     pointer-events: none;      
 
@@ -347,4 +348,33 @@
       }
     }
   }
+}
+
+@media (max-width: 768px) { /* 390px-ის ნაცვლად ჯობია 768px გამოვიყენოთ, რომ ყველა მობილური მოიცვას */
+    
+    // 1. მშობელი კონტეინერის 2-სვეტიან გრიდად ქცევა
+    .section-cards { // თუ შენს მშობელ კონტეინერს სხვა სახელი აქვს, შეცვალე ამით
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); // იქმნება 2 თანაბარი სვეტი
+        gap: 12px; // დაშორება ქარდებს შორის
+        padding: 16px; 
+        
+        // ვუთიშავთ ჰორიზონტალურ სქროლს, რადგან ახლა ქვემოთ ჩამოეწყობა
+        overflow-x: hidden; 
+        flex-wrap: wrap; // თუ flex-იც ერია სადმე, ამით დავაზღვევთ
+    }
+
+    // 2. თავად ქარდის დიზაინის მორგება მობილურისთვის
+    .card_2-wrapper {
+        width: 100%; /* მნიშვნელოვანია: იკავებს გრიდის 1 სვეტის სრულ სიგანეს */
+        height: 100px;
+    }
+
+    // 3. შიდა სურათის (ბანერის) ზომების და პოზიციის კორექტირება
+    .card_2-banner {
+        width: 75px;     // რადგან ქარდი დაპატარავდა, სურათიც ცოტა უნდა დაპატარავდეს
+        height: 75px;
+        bottom: -10px;
+        right: -10px;
+    }
 }
