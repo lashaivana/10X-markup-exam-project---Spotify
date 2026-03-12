@@ -187,3 +187,136 @@
   padding: 0 20px;
 
 }
+// =====================
+// Hide desktop nav bar on mobile
+// =====================
+@media (max-width: 768px) {
+  .playlist-nav-bar {
+    display: none;
+  }
+}
+
+// =====================
+// Mobile Library Header
+// =====================
+.library-mobile-header {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .library-mobile-header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 16px 8px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #060606;
+
+    &__search-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__search {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      background-color: #282828;
+      border-radius: 10px;
+      padding: 8px 15px;
+    }
+
+    &__search-icon {
+      width: 16px;
+      height: 16px;
+      opacity: 0.6;
+      flex-shrink: 0;
+    }
+
+    &__input {
+      flex: 1;
+      background: none;
+      border: none;
+      outline: none;
+      color: #e0e0e0;
+      font-size: 14px;
+
+      &::placeholder {
+        color: #898989;
+      }
+    }
+
+    &__add {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+
+      img {
+        width: 24px;
+        height: 24px;
+        filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(85%);
+      }
+
+      &:hover img {
+        opacity: 1;
+      }
+    }
+
+    &__controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__controls-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &__btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #898989;
+      font-size: 13px;
+      padding: 6px 4px;
+
+      img {
+        width: 14px;
+        height: 14px;
+        filter: brightness(0) saturate(100%) invert(57%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(95%) contrast(85%);
+      }
+    }
+
+    &__view {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 20px;
+        height: 20px;
+        opacity: 0.7;
+      }
+
+      &:hover img {
+        opacity: 1;
+      }
+    }
+  }
+}
