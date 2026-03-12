@@ -174,7 +174,7 @@
     cursor: pointer;
 
     &:hover .player-progress__fill {
-      background-color: $color-primary;
+      background-color: $color-text;
     }
   }
 
@@ -267,6 +267,92 @@
     width: 70%;
     background-color: $color-text;
     border-radius: $radius-pill;
+  }
+}
+
+// =====================
+// Mobile-only elements (hidden on desktop)
+// =====================
+.player-mobile-actions {
+  display: none;
+}
+
+.player-mobile-progress {
+  display: none;
+}
+
+// =====================
+// Mobile Player
+// =====================
+@include mobile {
+  .player {
+    bottom: calc(#{$bottom-nav-height} + 1px);
+    left: $spacing-md;
+    right: $spacing-md;
+    height: $mobile-player-height;
+    border-radius: 10px;
+    padding: 0 $spacing-md;
+    gap: $spacing-md;
+    overflow: hidden;
+  }
+
+  .player-center {
+    display: none;
+  }
+
+  .player-right {
+    display: none;
+  }
+
+  .player-left {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .player-track__album {
+    display: none;
+  }
+
+  .player-cover {
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+  }
+
+  .player-mobile-actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+    flex-shrink: 0;
+
+    img {
+      width: 28px;
+      height: 28px;
+      opacity: 0.8;
+    }
+
+    .player-btn:last-child img {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  .player-mobile-progress {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    right: 16px;
+    height: 2px;
+    background: $color-surface;
+    border-radius: $radius-pill;
+
+    &__fill {
+      width: 50%;
+      height: 100%;
+      background: $color-text;
+      border-radius: $radius-pill;
+    }
   }
 }
 
