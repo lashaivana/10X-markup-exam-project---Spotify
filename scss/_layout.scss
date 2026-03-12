@@ -35,9 +35,20 @@
 // =====================
 // Main Content
 // =====================
+// =====================
+// Main Content
+// =====================
 .main-content {
   flex: 1;
-  overflow-y: auto;
+  overflow-y: auto; 
   padding: $spacing-lg;
   padding-bottom: $player-height;
+
+  
+  &::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }

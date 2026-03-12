@@ -1,122 +1,282 @@
-// search section
-.search_card-wrapper{
+// =============================================================================
+// SEARCH PAGE — Recent Searches + Browse All sections
+// =============================================================================
+
+
+// -----------------------------------------------------------------------------
+// RECENT SEARCHES — card row wrapper
+// -----------------------------------------------------------------------------
+
+.search_card-wrapper {
     display: flex;
-    margin: 25px;
-    gap: 30px;
+    margin: $spacing-lg;        
+    gap: 30px;                  
+    overflow-x: auto;           
+    overflow-y: hidden;         
+    &::-webkit-scrollbar { display: none; } 
 }
 
 
-.search_card{
+// -----------------------------------------------------------------------------
+// ROUND CARD — artist / profile type (circular image)
+// -----------------------------------------------------------------------------
+
+.search_card {
+    flex-shrink: 0;             
     position: relative;
-    background-color:transparent;
-    width: 170px;
-    height: 205px;
+    background-color: transparent;
+    width: 170px;               
+    height: 205px;              
     text-align: center;
-    object-fit: cover;
     transition: transform 0.3s ease;
-     &:hover {
-    transform: scale(1.05);
 
-    .search_card-banner {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-    }
-  }
-}
-.search_card-square{
-    position: relative;
-    width: 170px;
-    height: 230px;
-    background-color:transparent;
-    transition: transform 0.3s ease;
-     &:hover {
+    &:hover {
         transform: scale(1.05);
 
-    .search_card-rectangle {
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+        .search_card-banner {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+        }
     }
-    .hover-square {
-      opacity: 1; 
+}
 
+
+// -----------------------------------------------------------------------------
+// SQUARE CARD — album / playlist type (rectangular image)
+// -----------------------------------------------------------------------------
+
+.search_card-square {
+    flex-shrink: 0;             
+    position: relative;
+    width: 170px;               
+    height: 230px;              
+    background-color: transparent;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.03);
+
+        .search_card-rectangle {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+        }
+
+        .hover-square {
+            opacity: 1;
+        }
     }
 }
-}
-.search_card-banner{
+
+
+// -----------------------------------------------------------------------------
+// CARD IMAGES
+// -----------------------------------------------------------------------------
+
+// Round image used in artist cards
+.search_card-banner {
+    width: 100%;               
+    height: 170px;              
     border-radius: 50%;
+    object-fit: cover;          
     transition: box-shadow 0.3s ease;
 }
-.search_card-rectangle{
+
+// Rectangular image used in album cards
+.search_card-rectangle {
     position: absolute;
-    top: 10px;
-    width: 170px;
-    height: 170px;
-    border-radius: 8px;
+    top: 10px;                 
+    left: 0;                    
+    width: 170px;              
+    height: 170px;              
+    border-radius: $radius-md;  
     border: 1px solid black;
-     transition: box-shadow 0.3s ease;
+    object-fit: cover;         
+    transition: box-shadow 0.3s ease;
 }
-.x-mark{
+
+
+// -----------------------------------------------------------------------------
+// X (REMOVE) BUTTON — top-right corner of each card
+// -----------------------------------------------------------------------------
+
+.x-mark {
     position: absolute;
-    width: 40px;
-    height: 40px;
-    background-color: #111111;
+    top: 0;                    
+    right: 0;
+    width: 40px;               
+    height: 40px;               
+    background-color: $color-active-bg; 
     border-radius: 50%;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   z-index: 1;
-   right: 0;
+    @include flex-center;           
+    z-index: 2;                 
+    opacity: 0;                
+    transition: opacity 0.2s ease;
+
+   
+    .search_card:hover &,
+    .search_card-square:hover & {
+        opacity: 1;
+    }
 }
-.hover-square{
-    height: 170px;
-    width: 145px;
+
+
+// -----------------------------------------------------------------------------
+// HOVER GLOW LAYER — decorative bg behind square card image
+// -----------------------------------------------------------------------------
+
+.hover-square {
     position: absolute;
-    z-index: -1;
-    margin-bottom: 6px;
-    border-radius: 8px;
-    left: 10px;
-    background-color: rgba(98, 120, 177, 0.3);
-    opacity: 0;
+    top: 10px;                 
+    left: 10px;                 
+    width: 145px;               
+    height: 170px;              
+    border-radius: $radius-md;  
+    background-color: rgba(98, 120, 177, 0.3); 
+    opacity: 0;                 
     transition: opacity 0.3s ease;
+    z-index: 0;                
+                                
 }
-.search_card-title-rec{
+
+
+// -----------------------------------------------------------------------------
+// CARD TITLES
+// -----------------------------------------------------------------------------
+
+// Title block for square/album cards — pinned to card bottom
+.search_card-title-rec {
     position: absolute;
     bottom: 0;
+    left: 0;                   
     z-index: 1;
-    margin-top: 13px;
+    padding: 0 $spacing-xs;     
 }
-.search_card-title{
-    margin-top: 13px;
+
+// Title block for round/artist cards — sits below the circular image
+.search_card-title {
+    margin-top: 13px;           
     text-align: center;
 }
-.artist{
-    color: #fff;
+
+// Artist name text
+.artist {
+    @include truncate;          
+    color: $fg-primary;         
     font-weight: 400;
 }
 
-// brows all section
 
-.section-cards {
-  display: flex;
-  overflow-x: auto;
-  gap: 12px;
- padding: 10px;
-  &::-webkit-scrollbar { display: none; }
+// =============================================================================
+// BROWSE ALL — scrollable category rows
+// =============================================================================
+
+
+// -----------------------------------------------------------------------------
+// SECTION WRAPPER — one row (Discover / Genres / Mood etc.)
+// -----------------------------------------------------------------------------
+
+.browse_all-section {           
+    margin-bottom: $spacing-xl; 
 }
 
-.card_2-wrapper {
-  flex-shrink: 0; // არ დაიკუმშოს!
-  flex-grow: 0;   // არ გაიჭიმოს!
-  width: clamp(100px, 15vw, 170px);
-  height: clamp(100px, 15vw, 170px);
+
+// -----------------------------------------------------------------------------
+// SECTION HEADER — title + left/right scroll arrows
+// -----------------------------------------------------------------------------
+
+.section-header {
+    @include flex-between;      
+    padding: 0 $spacing-lg;     
 }
-.section-title{
-    margin: 25px;
-    color: #fff;
+
+.section-title {
+    margin: $spacing-lg;        
+    color: $fg-primary;         
     font-weight: 600;
 }
-.section-cards{
-    margin: 15px;
+
+// Arrow scroll buttons
+.section__controls {
+    @include flex-center;       
+    gap: $spacing-sm;           
 }
-.section-header{
+
+.arrow {
+    @include flex-center;      
+    background: none;
+    border: none;
+    color: $fg-primary;         
+    cursor: pointer;
+    padding: $spacing-xs;      
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+// -----------------------------------------------------------------------------
+// SCROLLABLE CARD ROW
+// -----------------------------------------------------------------------------
+
+.section-cards {
     display: flex;
-    justify-content: space-between;
+    gap: 12px;                  
+    padding: 10px $spacing-md;  
+    overflow-x: auto;           
+    &::-webkit-scrollbar { display: none; }
+}
+
+
+// -----------------------------------------------------------------------------
+// BROWSE ALL CARD
+// -----------------------------------------------------------------------------
+
+.card_2-wrapper {
+    flex-shrink: 0;             
+    flex-grow: 0;               
+    position: relative;         
+    width: 170px;               
+    height: 170px;              
+    border-radius: $radius-md;  
+    overflow: hidden;           
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+}
+
+
+.card_2-header {
+    position: relative;         
+    z-index: 1;
+    padding: $spacing-md;      
+}
+
+
+.card_2-title {
+    @include truncate;          
+    color: $fg-primary;        
+    font-size: $font-md;        
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+// Decorative corner image inside each card
+.card_2-banner {
+    position: absolute;
+    bottom: 0;
+    right: 0;                   
+    width: 80px;                
+    height: 80px;               
+    transform: rotate(25deg) translate(10%, 10%); 
+    pointer-events: none;      
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
