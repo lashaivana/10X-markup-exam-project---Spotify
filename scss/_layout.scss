@@ -35,9 +35,12 @@
 // =====================
 // Main Content
 // =====================
+// =====================
+// Main Content
+// =====================
 .main-content {
   flex: 1;
-  overflow-y: auto;
+  overflow-y: auto; 
   padding: $spacing-lg;
   padding-bottom: $player-height;
 }
@@ -48,6 +51,9 @@
 @include mobile {
   .app-wrapper {
     flex-direction: column;
+    height: auto;          // <--- ვაძლევთ საშუალებას, გაიზარდოს კონტენტის მიხედვით
+    overflow: visible;
+    
   }
 
   .main-area {
