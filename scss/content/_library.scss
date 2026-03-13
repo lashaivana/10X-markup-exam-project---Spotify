@@ -212,11 +212,6 @@
   }
 }
 
-// Slight negative margin to align home cards vertically with pinned cards
-.home-card {
-  margin-top: -5px;
-}
-
 // Scroll arrow row — right-aligned, sits above each scrollable card row
 .library-scroll {
   display: flex;
@@ -618,49 +613,49 @@
 
 @media (max-width: 768px) {
     
-    // 1. ვამცირებთ დაშორებებს ბარათებს შორის ყველა სექციაში
+    
     .library_cards-wrapper,
     .search_card-wrapper,
     .cards-wrapper {
-        gap: 12px !important; 
-        padding: 12px 16px !important; 
+        gap: 12px;
+        padding: 12px 16px;
     }
 
-    // 2. ბარათების ზომების გასწორება
+   
     .search_card,
     .search_card-square,
     .card_wrapper,
     .card_wrapper.home-card {
-        width: 141px !important;
-        height: 220px !important;
-        margin-top: 0 !important;
-        margin-right: 0 !important;
+        width: 141px; 
+        height: 220px; 
+        margin-top: 0; 
+        margin-right: 0 ;
     }
 
-    // 3. არტისტის სურათის გაწელვის თავიდან არიდება (იდეალური წრე)
+   
     .search_card-banner {
-        width: 141px !important;
-        height: 141px !important;
-        border-radius: 50% !important;
-        object-fit: cover !important;
-        margin: 0 auto !important;
+        width: 141px;
+        height: 141px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto;
     }
 
-    // 4. X ნიშნის გამოჩენა და პოზიციონირება მარჯვენა ზედა კუთხეში
+    
     .x-mark {
-        display: flex !important;
-        width: 28px !important;
-        height: 28px !important;
+        display: flex;
+        width: 28px; 
+        height: 28px; 
         top: 5px !important;
-        right: 5px !important;
-        opacity: 1 !important; 
-        visibility: visible !important;
-        z-index: 10 !important;
+        right: 0px !important;
+        opacity: 1; 
+        visibility: visible;
+        z-index: 10; 
         
         img {
-            width: 14px !important;
-            height: auto !important;
-            display: block !important;
+            width: 14px;
+            height: auto; 
+            display: block;
         }
     }
 }

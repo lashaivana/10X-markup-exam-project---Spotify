@@ -1014,10 +1014,12 @@ input {
 
 .search_card-wrapper {
   display: flex;
+  align-items: flex-start;
   margin: 24px;
   gap: 30px;
   overflow-x: auto;
   overflow-y: hidden;
+  padding: 20px;
 }
 .search_card-wrapper::-webkit-scrollbar {
   display: none;
@@ -1057,23 +1059,18 @@ input {
   opacity: 1;
 }
 
+.recent {
+  margin-top: -10px;
+}
+.recent .x-mark {
+  top: 10px;
+  right: -10px;
+}
+
 .search_card-banner {
   width: 100%;
   height: 170px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  transition: box-shadow 0.3s ease;
-}
-
-.search_card-rectangle {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 170px;
-  height: 170px;
-  border-radius: 8px;
-  border: 1px solid black;
   -o-object-fit: cover;
      object-fit: cover;
   transition: box-shadow 0.3s ease;
@@ -1095,26 +1092,6 @@ input {
 }
 .search_card:hover .x-mark, .search_card-square:hover .x-mark {
   opacity: 1;
-}
-
-.hover-square {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 145px;
-  height: 170px;
-  border-radius: 8px;
-  background-color: rgba(98, 120, 177, 0.3);
-  transition: opacity 0.3s ease;
-  z-index: 0;
-}
-
-.search_card-title-rec {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  padding: 0 4px;
 }
 
 .search_card-title {
@@ -1287,7 +1264,7 @@ input {
     opacity: 1;
   }
 }
-@media (max-width: 768px) { /* 390px-ის ნაცვლად ჯობია 768px გამოვიყენოთ, რომ ყველა მობილური მოიცვას */
+@media (max-width: 768px) {
   .section-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1297,7 +1274,7 @@ input {
     flex-wrap: wrap;
   }
   .card_2-wrapper {
-    width: 100%; /* მნიშვნელოვანია: იკავებს გრიდის 1 სვეტის სრულ სიგანეს */
+    width: 100%;
     height: 100px;
   }
   .card_2-banner {
@@ -1536,16 +1513,26 @@ input {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.song-table .song_banner .song_title {
+  min-width: 0;
+  overflow: hidden;
+}
 .song-table .song_banner .song_title h3 {
   color: #FFFFFF;
   margin: 0;
   font-size: 16px;
   font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .song-table .song_banner .song_title p {
   margin: 4px 0 0 0;
   font-size: 13px;
   color: #898989;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .song-table .duration-content {
   display: flex;
@@ -2001,10 +1988,6 @@ input {
   flex-shrink: 0;
 }
 
-.home-card {
-  margin-top: -5px;
-}
-
 .library-scroll {
   display: flex;
   justify-content: flex-end;
@@ -2347,40 +2330,40 @@ input {
   .library_cards-wrapper,
   .search_card-wrapper,
   .cards-wrapper {
-    gap: 12px !important;
-    padding: 12px 16px !important;
+    gap: 12px;
+    padding: 12px 16px;
   }
   .search_card,
   .search_card-square,
   .card_wrapper,
   .card_wrapper.home-card {
-    width: 141px !important;
-    height: 220px !important;
-    margin-top: 0 !important;
-    margin-right: 0 !important;
+    width: 141px;
+    height: 220px;
+    margin-top: 0;
+    margin-right: 0;
   }
   .search_card-banner {
-    width: 141px !important;
-    height: 141px !important;
-    border-radius: 50% !important;
-    -o-object-fit: cover !important;
-       object-fit: cover !important;
-    margin: 0 auto !important;
+    width: 141px;
+    height: 141px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 auto;
   }
   .x-mark {
-    display: flex !important;
-    width: 28px !important;
-    height: 28px !important;
+    display: flex;
+    width: 28px;
+    height: 28px;
     top: 5px !important;
-    right: 5px !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    z-index: 10 !important;
+    right: 0px !important;
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
   }
   .x-mark img {
-    width: 14px !important;
-    height: auto !important;
-    display: block !important;
+    width: 14px;
+    height: auto;
+    display: block;
   }
 }
 .filters-sticky-header {

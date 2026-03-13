@@ -11,12 +11,15 @@
 
 .search_card-wrapper {
     display: flex;
+    align-items: flex-start;
     margin: $spacing-lg;        
     gap: 30px;                  
     overflow-x: auto;           
-    overflow-y: hidden;         
+    overflow-y: hidden;
+    padding: 20px;         
     &::-webkit-scrollbar { display: none; } 
 }
+
 
 
 // -----------------------------------------------------------------------------
@@ -67,7 +70,13 @@
     }
 }
 
-
+.recent{
+    margin-top: -10px;
+    .x-mark{
+        top: 10px;
+        right: -10px
+    }
+}
 // -----------------------------------------------------------------------------
 // CARD IMAGES
 // -----------------------------------------------------------------------------
@@ -78,19 +87,6 @@
     height: 170px;              
     border-radius: 50%;
     object-fit: cover;          
-    transition: box-shadow 0.3s ease;
-}
-
-// Rectangular image used in album cards
-.search_card-rectangle {
-    position: absolute;
-    top: 10px;                 
-    left: 0;                    
-    width: 170px;              
-    height: 170px;              
-    border-radius: $radius-md;  
-    border: 1px solid black;
-    object-fit: cover;         
     transition: box-shadow 0.3s ease;
 }
 
@@ -119,37 +115,10 @@
 }
 
 
-// -----------------------------------------------------------------------------
-// HOVER GLOW LAYER — decorative bg behind square card image
-// -----------------------------------------------------------------------------
-
-.hover-square {
-    position: absolute;
-    top: 10px;                 
-    left: 10px;                 
-    width: 145px;               
-    height: 170px;              
-    border-radius: $radius-md;  
-    background-color: rgba(98, 120, 177, 0.3); 
-                   
-    transition: opacity 0.3s ease;
-    z-index: 0;                
-                                
-}
-
 
 // -----------------------------------------------------------------------------
 // CARD TITLES
 // -----------------------------------------------------------------------------
-
-// Title block for square/album cards — pinned to card bottom
-.search_card-title-rec {
-    position: absolute;
-    bottom: 0;
-    left: 0;                   
-    z-index: 1;
-    padding: 0 $spacing-xs;     
-}
 
 // Title block for round/artist cards — sits below the circular image
 .search_card-title {
@@ -350,29 +319,29 @@
   }
 }
 
-@media (max-width: 768px) { /* 390px-ის ნაცვლად ჯობია 768px გამოვიყენოთ, რომ ყველა მობილური მოიცვას */
+@media (max-width: 768px) { 
     
-    // 1. მშობელი კონტეინერის 2-სვეტიან გრიდად ქცევა
-    .section-cards { // თუ შენს მშობელ კონტეინერს სხვა სახელი აქვს, შეცვალე ამით
+   
+    .section-cards { 
         display: grid;
-        grid-template-columns: repeat(2, 1fr); // იქმნება 2 თანაბარი სვეტი
-        gap: 12px; // დაშორება ქარდებს შორის
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px; 
         padding: 16px; 
         
-        // ვუთიშავთ ჰორიზონტალურ სქროლს, რადგან ახლა ქვემოთ ჩამოეწყობა
+        
         overflow-x: hidden; 
-        flex-wrap: wrap; // თუ flex-იც ერია სადმე, ამით დავაზღვევთ
+        flex-wrap: wrap; 
     }
 
-    // 2. თავად ქარდის დიზაინის მორგება მობილურისთვის
+    
     .card_2-wrapper {
-        width: 100%; /* მნიშვნელოვანია: იკავებს გრიდის 1 სვეტის სრულ სიგანეს */
+        width: 100%; 
         height: 100px;
     }
 
-    // 3. შიდა სურათის (ბანერის) ზომების და პოზიციის კორექტირება
+    
     .card_2-banner {
-        width: 75px;     // რადგან ქარდი დაპატარავდა, სურათიც ცოტა უნდა დაპატარავდეს
+        width: 75px;     
         height: 75px;
         bottom: -10px;
         right: -10px;

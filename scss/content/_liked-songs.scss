@@ -93,16 +93,25 @@
 
     // Track name + artist name
     .song_title {
+
+       min-width: 0; 
+      overflow: hidden;
       h3 {
         color: $fg-primary;          
         margin: 0;
         font-size: $font-lg;         
         font-weight: 500;
+         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       p {
         margin: $spacing-xs 0 0 0;   
         font-size: 13px;             
-        color: $color-text-muted;    
+        color: $color-text-muted; 
+         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;   
       }
     }
   }
