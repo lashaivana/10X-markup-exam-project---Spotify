@@ -42,7 +42,10 @@
 // =====================
 // Library page
 // =====================
-@use "content/library" as *;
+@use 'content/library' as *;
 
-// Import the song styles
-@import "song";
+// =====================
+// Filter chips
+// =====================
+@use 'content/filters' as *;
+@use 'content/home.dropdown' as *;
