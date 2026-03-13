@@ -2894,17 +2894,16 @@ span {
   margin-top: 12px;
 }
 
-.bottom-nav {
+.track-nav {
   display: flex;
   flex-direction: row;
-  display: flex;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
-.bottom-nav span {
+.track-nav span {
   margin-left: 30px;
   color: #898989;
 }
-.bottom-nav .first-bot-nav {
+.track-nav .first-bot-nav {
   margin-left: 50px;
   border-bottom: 2px solid #1db954;
   color: white;
