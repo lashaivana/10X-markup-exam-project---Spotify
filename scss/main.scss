@@ -1,43 +1,43 @@
 // =====================
 // Abstracts
 // =====================
-@use 'variables' as *;
-@use 'mixins' as *;
+@use "variables" as *;
+@use "mixins" as *;
 
 // =====================
 // Base
 // =====================
-@use 'reset' as *;
+@use "reset" as *;
 
 // =====================
 // Layout
 // =====================
-@use 'layout' as *;
+@use "layout" as *;
 
 // =====================
 // Components
 // =====================
-@use 'sidebar' as *;
-@use 'header' as *;
-@use 'player' as *;
-@use 'bottom-nav' as *;
-@use 'player-popup' as *;
+@use "sidebar" as *;
+@use "header" as *;
+@use "player" as *;
+@use "bottom-nav" as *;
+@use "player-popup" as *;
 
 // =====================
 // Home page
 // =====================
-@use 'content/card' as *;
+@use "content/card" as *;
 
 // =====================
 // Search page
 // =====================
-@use 'content/search' as *;
-@use 'content/card-2' as *;
+@use "content/search" as *;
+@use "content/card-2" as *;
 
 // =====================
 // Liked songs page
 // =====================
-@use 'content/liked-songs' as *;
+@use "content/liked-songs" as *;
 
 // =====================
 // Library page
