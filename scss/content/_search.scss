@@ -175,7 +175,10 @@
     border: none;
     color: $fg-primary;         
     cursor: pointer;
-    padding: $spacing-xs;      
+    padding: $spacing-xs; 
+    width: 32px;       // ← დაამატე
+    height: 32px;      // ← დაამატე
+    font-size: 20px;      
     opacity: 0.7;
     transition: opacity 0.2s ease;
 
