@@ -1,5 +1,5 @@
 @use 'variables' as *;
-@use 'mixins' as *;
+// @use 'mixins' as *;
 
 .main-sec-wrapper {
   height: 100vh;
@@ -137,10 +137,9 @@ span {
 .main-bottom-wrapper {
   margin-top: 12px;
 }
-.bottom-nav {
+.track-nav {
   display: flex;
   flex-direction: row;
-  display: flex;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
   span {
