@@ -219,14 +219,14 @@
 // =============================================================================
 
 // Chrome, Safari, new Edge
-.main-content::-webkit-scrollbar, // <--- ეს დაამატეთ
+.main-content::-webkit-scrollbar, 
 .cards-wrapper::-webkit-scrollbar,
 .search_card-wrapper::-webkit-scrollbar {
   display: none;
 }
 
 // IE / old Edge + Firefox
-.main-content, // <--- ეს დაამატეთ
+.main-content, 
 .cards-wrapper,
 .search_card-wrapper {
   -ms-overflow-style: none;         
